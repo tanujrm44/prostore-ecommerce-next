@@ -1,21 +1,16 @@
-import Footer from "@/components/footer"
-import Header from "@/components/ui/shared"
-import { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "Home",
-}
+import Header from '@/components/shared/header';
+import Footer from '@/components/footer';
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <div className="flex h-screen flex-col">
+    <div className='flex h-screen flex-col'>
       <Header />
-      <main className="flex-1 wrapper">ROOT{children}</main>
+      <main className='flex-1 wrapper'>{children}</main>
       <Footer />
     </div>
-  )
+  );
 }
